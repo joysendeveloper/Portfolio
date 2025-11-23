@@ -1,6 +1,7 @@
 "use client"
 
 import { HeroScene } from "./3d/hero-scene"
+import AtomBackground from "./ui/AtomBackground"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
@@ -8,10 +9,10 @@ export function Hero() {
     return (
         <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
             {/* Background Image */}
-            <div
-                className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-30 dark:opacity-20"
-                style={{ backgroundImage: 'url("/hero-bg.png")' }}
-            />
+            {/* Atom Background */}
+            <div className="absolute inset-0 z-0">
+                <AtomBackground />
+            </div>
 
             {/* Overlay Gradient */}
             <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
